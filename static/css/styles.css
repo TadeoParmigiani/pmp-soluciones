@@ -1,0 +1,18 @@
+/* Importación de archivos CSS externos */
+@import "header.css";
+@import "footer.css";
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('../img/75c2f842863ae2df6b3ac2d0a4d63026.gif') no-repeat center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
