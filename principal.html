@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    <link rel="stylesheet" type="text/css" href="./static/css/styles.css"">
+</head>
+<body>
+    <header class="custom-header">
+        <div class="custom-container">
+            <div class="custom-logo">
+                <a href="#home">PMP</a>
+            </div>
+            <nav class="custom-nav">
+                <ul class="custom-nav-list">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Acerca de</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="custom-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <div class="fondoinicio" id="inicio">
+            <img src="sinfondo.png" width="50%">
+            <!--<h1 class="textoLogo"></h1>-->
+    </div>
+    <main>
+
+        <div class="content">
+            <div class="slider">
+                <div class="slider-track">
+                    <div class="product">
+                        <h2>Producto 1</h2>
+                        <p>Descripción del Producto 1.</p>
+                    </div>
+                    <div class="product">
+                        <h2>Producto 2</h2>
+                        <p>Descripción del Producto 2.</p>
+                    </div>
+                    <div class="product">
+                        <h2>Producto 3</h2>
+                        <p>Descripción del Producto 3.</p>
+                    </div>
+                    <!-- Puedes agregar más productos aquí -->
+                </div>
+            </div>
+        </div>
+        <div id="cajatexto">
+            <p id="tituloNosotros"><b>Nosotros</b></p>
+            <p class="textoNosotros" id="nosotros">
+            En PMP, nos dedicamos a transformar ideas en soluciones digitales innovadoras. 
+            Somos un equipo apasionado de desarrolladores de software que se especializan en crear aplicaciones 
+            personalizadas, plataformas web y sistemas tecnológicos que impulsan el crecimiento y la eficiencia 
+            de nuestros clientes. Nuestro enfoque combina creatividad y tecnología de punta para ofrecer productos
+            de alta calidad que se adaptan a las necesidades únicas de cada proyecto. 
+            En PMP, creemos que la clave del éxito es la colaboración y la comunicación transparente. 
+            Trabajamos codo a codo con nuestros clientes para entender sus desafíos y objetivos, brindando soluciones 
+            que no solo cumplen con sus expectativas, sino que las superan. Estamos comprometidos con la excelencia y 
+            la innovación continua, y nos enorgullece ser un socio confiable en el viaje digital de nuestros clientes.
+            ¡Descubre cómo podemos ayudarte a llevar tu proyecto al siguiente nivel con nuestras soluciones de software 
+            personalizadas!</p>
+        </div>
+
+        
+        <div class="project">
+            <div class="project-logo">
+                <img src="ruta/a/imagen1.png" alt="Project X Logo">
+            </div>
+            <div class="project-info">
+                <h3>MICROSERVICES ARCHITECTURE</h3>
+                <h2>Project X</h2>
+                <p>12 Microservices architecture to process lots of ecommerce data (millions monthly)</p>
+                <div class="tags">
+                    <span>Web</span><span>Angular</span><span>Kubernetes</span><span>Microservices</span>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project-logo">
+                <img src="ruta/a/imagen2.png" alt="Publiers Logo">
+            </div>
+            <div class="project-info">
+                <h3>WEB DEVELOPMENT</h3>
+                <h2>Publiers</h2>
+                <p>Get paid by campaigns on your vehicles</p>
+                <div class="tags">
+                    <span>Marketing</span><span>Web</span><span>Angular</span>
+                </div>
+            </div>
+        </div>
+        <!-- Añadir más proyectos aquí -->
+    </main>
+<div class="formulario">
+        <form>
+            <h2 id="contacto">Contacto</h2>
+
+            <div class="input-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Nombre">
+
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" placeholder="Telefono">
+
+                <label for="email">Email</label>
+                <input type="email" id="Email" placeholder="Email">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Mensaje"></textarea>
+
+                <input class="btn" type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+
+    <div class="fixed-buttons">
+        <a href="https://wa.me/1234567890" target="_blank">&#9990;</a>
+        <a href="#top">&#8679;</a>
+    </div>
+        
+</body>
+<script>
+    const track = document.querySelector('.slider-track');
+    const slider = document.querySelector('.slider');
+    let index = 0;
+    let isHovered = false;
+
+    function showNextProduct() {
+        if (!isHovered) {
+            index = (index + 1) % track.children.length;
+            track.style.transform = `translateX(-${index * 90}%)`;
+        }
+    }
+
+    slider.addEventListener('mouseenter', () => {
+        isHovered = true;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        isHovered = false;
+    });
+
+    setInterval(showNextProduct, 3000);
+</script>
+
+<footer class="custom-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Sobre Nosotros</h3>
+            <p>Información sobre la empresa hrthdhgsfhrtjethgsrhrt.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contacto</h3>
+            <p>Email: PMPsoluciones@gmail.com</p>
+            <p>Teléfono: +123 456 789</p>
+        </div>
+        <div class="footer-section">
+            <h3>Síguenos</h3>
+            <ul class="social-links">
+                <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+                <li><a href="https://www.instagram.com/fabriziopelozzi/"><i class="bx bxl-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Mapa del Sitio</h3>
+            <ul class="footer-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 PMP SOLUCIONES. Todos los derechos reservados.</p>
+        <ul class="footer-bottom-links">
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos del Servicio</a></li>
+        </ul>
+    </div>
+</footer>
+<script src="./static/js/header.js"></script>
+</html>
